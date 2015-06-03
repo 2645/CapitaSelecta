@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <widget xmlns     = "http://www.w3.org/ns/widgets"
-        xmlns:gap = "http://phonegap.com/ns/3.7.0"
-        id        = "capitaSelecta"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "be.erasmushogeschool.hello-camera"
         version   = "1.0.0">
 
-    <name>Capita Selecta</name>
+    <name>Hello Camera</name>
 
     <description>
-        Opdracht Capita Selecta voor Dynamic Web Development
+        Hello Camera sample application that uses the device's camera.
     </description>
 
-    <author href="http://erasmushogeschool.be">
-        
+    <author href="http://erasmushogeschool.be" email="jan.klaas.van.den.meersche@ehb.be">
+        Jan Klaas Van Den Meersche
     </author>
-    <icon src="icon.png"/>
     
     <!-- Platforms -->
     <!-- If you specify none, all platforms will be built. -->
-    <gap:platform name="" />
+    <gap:platform name="ios" />
 
     <!-- Preferences -->
 
@@ -37,19 +36,17 @@
     <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
     <preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
     <preference name="android-minSdkVersion"      value="7" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
-    <preference name="android-installLocation"    value="auto" />
-    <preference name="fullscreen" value="false" />
-    
-    <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+    <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+
     <!-- Plugins -->
 
     <!-- Core plugins -->
-    <!--
     <gap:plugin name="org.apache.cordova.camera" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.media-capture" />
     <gap:plugin name="org.apache.cordova.device" />
-    <gap:plugin name="org.apache.cordova.console" />    
+    <gap:plugin name="org.apache.cordova.console" />
+    <!--
     <gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.contacts" />
     <gap:plugin name="org.apache.cordova.device-motion" />
@@ -64,14 +61,12 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.vibration" />
     -->
-    <gap:plugin name="org.apache.cordova.device-motion" />
-    <gap:plugin name="org.apache.cordova.camera" />
-    
+
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
+    <gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
 
     <!-- Icons. This is a relative path to config.xml. -->
-    <!--
     <icon src="icon.png" />
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
     <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
@@ -86,10 +81,8 @@
     <icon src="res/icon/webos/icon-64.png"          gap:platform="webos" />
     <icon src="res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
     <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
-    -->
-    
+
     <!-- Splash screens. -->
-    <!--
     <gap:splash src="res/screen/android/screen-ldpi-portrait.png"       gap:platform="android" gap:qualifier="port-ldpi" />
     <gap:splash src="res/screen/android/screen-mdpi-portrait.png"       gap:platform="android" gap:qualifier="port-mdpi" />
     <gap:splash src="res/screen/android/screen-hdpi-portrait.png"       gap:platform="android" gap:qualifier="port-hdpi" />
@@ -101,7 +94,7 @@
     <gap:splash src="res/screen/ios/screen-ipad-portrait.png"           gap:platform="ios"     width="768" height="1024" />
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"          gap:platform="ios"     width="1024" height="768" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
-    -->
+
     <!-- External domain access -->
     <access origin="*"/>            <!-- a blank access tag denies access to all external resources. -->
 
