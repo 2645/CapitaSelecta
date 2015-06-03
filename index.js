@@ -6,8 +6,8 @@ $(document).ready(function(){
 
 function checkAccel(){
     navigator.accelerometer.getCurrentAcceleration(function(acceleration){
-        $(body).html('Acceleration X: ' + acceleration.x + '\n' + 'Acceleration Y: ' + acceleration.y + '\n' + 'Acceleration Z: ' + acceleration.z + '\n' + 'Timestamp: '      + acceleration.timestamp + '\n');
+        $('body').html('Acceleration X: ' + acceleration.x + '\n' + 'Acceleration Y: ' + acceleration.y + '\n' + 'Acceleration Z: ' + acceleration.z + '\n' + 'Timestamp: '      + acceleration.timestamp + '\n');
     }, function(){
-        $(body).html('FUCK THIS STUPID SHIT');
+        $('body').html('FUCK THIS STUPID SHIT');
     })
 }
