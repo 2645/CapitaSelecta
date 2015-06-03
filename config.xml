@@ -5,10 +5,10 @@
         id        = "be.erasmushogeschool.hello-camera"
         version   = "1.0.0">
 
-    <name>Stuvo ehb</name>
+    <name>Capita Selecta</name>
 
     <description>
-        Stuvo app voor studenten van de ehb
+        Opdracht Capita Selecta voor Dynamic Web Development
     </description>
 
     <author href="http://erasmushogeschool.be">
