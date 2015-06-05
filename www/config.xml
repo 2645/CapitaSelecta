@@ -8,13 +8,13 @@
         Capita Selecta opdracht Dynamic Web Dev
     </description>
 
-    <author email="jan.de.smet@ehb.be">
+    <author email="jan.de.smet@student.ehb.be">
         Jan De Smet
     </author>
 
     <!-- Platforms -->
     <!-- If you specify none, all platforms will be built. -->
-    <gap:platform name="" />
+    <gap:platform name="android" />
 
     <!-- Preferences -->
 
