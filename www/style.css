@@ -1,9 +1,9 @@
 html, body{
-    width:100%;
+    max-width:100%;
     background-color: rgb(3,42,74);
     color:white;
     font-family: arial;
-    font-size: 2em;
+    font-size: 125%;
 }
 
 h1{
@@ -16,7 +16,8 @@ h1{
 }
 
 .descr {
-    font-size: 0.5em;
+    border-top: 2px solid white;
+    font-size: 50%;
 }
 
 #accel{
@@ -24,9 +25,9 @@ h1{
 }
 
 .small{
-    font-size: 0.4em;
+    font-size: 40%;
 }
 
 .extraSmall{
-    font-size: 0.2em;
+    font-size: 30%;
 }
