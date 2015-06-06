@@ -23,7 +23,7 @@ function onDeviceReady() {
 }
 
 function onSuccessRot(heading) {
-    $('#rotation').html('Heading: ' + Math.round(heading.magneticHeading));
+    $('#rotation').html('Heading: ' + Math.round(heading.magneticHeading/3.6));
 };
 
 function onErrorRot(compassError) {
