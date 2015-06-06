@@ -33,7 +33,7 @@ function onErrorRot(compassError) {
     $('#rotation').html('Compass error: ' + compassError.code);
 };
 
-function onSuccesAccel(acceleration){
+function onSuccessAccel(acceleration){
     $('#accel').html('Acceleration X: ' + acceleration.x + '<br>' + 'Acceleration Y: ' + acceleration.y + '<br>' + 'Acceleration Z: ' + acceleration.z + '<br>' + 'Timestamp: ' + acceleration.timestamp );
 };
 
