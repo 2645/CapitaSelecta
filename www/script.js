@@ -31,7 +31,8 @@ function onErrorRot(compassError) {
 };
 
 function onSuccessAccel(acceleration) {
-    $('#accel').html('Acceleration X: ' + Math.round(acceleration.x) + '<br>' + 'Acceleration Y: ' + Math.round(acceleration.y) + '<br>' + 'Acceleration Z: ' + Math.round(acceleration.z));
+    var xAccel = Math.round(acceleration.x);
+    $('#accel').html('Acceleration X: ' + xAccel + '<br>' + 'Acceleration Y: ' + Math.round(acceleration.y) + '<br>' + 'Acceleration Z: ' + Math.round(acceleration.z));
 
 };
 
