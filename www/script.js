@@ -22,7 +22,7 @@ function getAccel() {
     navigator.accelerometer.getCurrentAcceleration(onSuccessAccel, onErrorAccel);
 }
 
-function onSuccesAccel(acceleration){
+function onSuccessAccel(acceleration){
     $('#accel').html('Acceleration X: ' + acceleration.x + '\n' + 'Acceleration Y: ' + acceleration.y + '\n' + 'Acceleration Z: ' + acceleration.z + '\n' + 'Timestamp: ' +a cceleration.timestamp + '\n');
 }
 
