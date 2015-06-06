@@ -16,6 +16,7 @@ var options = {
 };
 
 function onDeviceReady() {
+    $('body').html('FUCK THIS');
     $(document).ready(function () {
         console.log(device);
         console.log(window.device);
