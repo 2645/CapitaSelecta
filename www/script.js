@@ -28,7 +28,7 @@ function onSuccessAccel(acceleration) {
     
     $('#accel').html('Acceleration X: ' + xAccel + '<br>' + 'Acceleration Y: ' + yAccel + '<br>' + 'Acceleration Z: ' + zAccel);
     
-    $('#record').html(maxSpeed);
+    $('#record').html(maxAccel);
 
 };
 
