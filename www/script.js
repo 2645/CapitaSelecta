@@ -19,16 +19,16 @@ function onDeviceReady() {
     
     $('body').append('<div>WE READY</div>');
 
-    navigator.compass.watchHeading(onSuccess, onError, options);
+    navigator.compass.watchHeading(onSuccessRot, onErrorRot, options);
 
 
 
 }
 
-function onSuccess(heading) {
+function onSuccessRot(heading) {
     $('#rotation').html('Heading: ' + heading.magneticHeading);
 };
 
-function onError(compassError) {
+function onErrorRot(compassError) {
     $('#rotation').html('Compass error: ' + compassError.code);
 };
