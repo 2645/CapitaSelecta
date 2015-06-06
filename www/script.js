@@ -9,7 +9,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
 // Cordova is ready to be used!
 //
 
-var maxSpeed = 0;
 
 
 var options = {
@@ -32,19 +31,10 @@ function onErrorRot(compassError) {
 };
 
 function onSuccessAccel(acceleration) {
-    var xAccel = Math.round(acceleration.x);
-    var yAccel = Math.round(acceleration.y);
-    var zAccel = Math.round(acceleration.z);
+    $('#accel').html('Acceleration X: ' + Math.round(acceleration.x) + '<br>' + 'Acceleration Y: ' + Math.round(acceleration.y) + '<br>' + 'Acceleration Z: ' + Math.round(acceleration.z));
 
-    //updateMaxSpeed();
-
-    $('#accel').html('Acceleration X: ' + xAccel + '<br>' + 'Acceleration Y: ' + yAccel + '<br>' + 'Acceleration Z: ' + zAccel);
 };
 
 function onErrorAccel(accelError) {
     $('#accel').html('Accel error: ' + accelError.code);
 };
-
-function maxSpeed {
-    $('#record').html(maxSpeed);
-}
