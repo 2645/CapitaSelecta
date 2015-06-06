@@ -15,10 +15,7 @@ var options = {
     frequency: 500
 };
 
-function onDeviceReady() {
-    
-    $('body').append('<div>WE READY</div>');
-
+function onDeviceReady() {}
     navigator.compass.watchHeading(onSuccessRot, onErrorRot, options);
     navigator.accelerometer.watchAcceleration(onSuccessAccel, onErrorAccel, options);
 
@@ -26,7 +23,7 @@ function onDeviceReady() {
 }
 
 function onSuccessRot(heading) {
-    $('#rotation').html('Heading: ' + heading.magneticHeading);
+    $('#rotation').html('Heading: ' + Math.round(heading.magneticHeading));
 };
 
 function onErrorRot(compassError) {
