@@ -32,21 +32,19 @@ function onErrorRot(compassError) {
 };
 
 function onSuccessAccel(acceleration) {
-    var accel = [Math.abs(Math.round(acceleration.x)), Math.abs(Math.round(acceleration.y)), Math.abs(Math.round(acceleration.y))];
+    var xAccel = Math.round(acceleration.x);
+    var yAccel = Math.round(acceleration.y);
+    var zAccel = Math.round(acceleration.z);
 
-    if (maxSpeed < Math.max.apply(Math, accel)) {
-        maxSpeed = Math.max.apply(Math, accel);
-    }
-    
-    updateMaxSpeed();
+    //updateMaxSpeed();
 
-    $('#accel').html('Acceleration X: ' + Math.round(acceleration.x) + '<br>' + 'Acceleration Y: ' + Math.round(acceleration.y) + '<br>' + 'Acceleration Z: ' + Math.round(acceleration.z));
+    $('#accel').html('Acceleration X: ' + xAccel + '<br>' + 'Acceleration Y: ' + yAccel + '<br>' + 'Acceleration Z: ' + zAccel);
 };
 
 function onErrorAccel(accelError) {
     $('#accel').html('Accel error: ' + accelError.code);
 };
 
-function maxSpeed{
+function maxSpeed {
     $('#record').html(maxSpeed);
 }
