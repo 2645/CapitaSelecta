@@ -12,7 +12,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 
 var options = {
-    frequency: 500
+    frequency: 10
 };
 
 function onDeviceReady() {
