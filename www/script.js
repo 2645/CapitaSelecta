@@ -8,29 +8,27 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 // Cordova is ready to be used!
 //
+
+var options = {
+    frequency: 500
+}; 
+
 function onDeviceReady() {
     console.log(device);
     console.log(window.device);
     console.log(window.plugins);
-
-    setInterval(getAccel(), 100);
-    setInterval(getRot(), 100);
+    $('body').append('WE READY');
+    
+    navigator.compass.watchHeading(onSuccess, onError, options);
 
 }
 
-function getAccel() {
-    navigator.accelerometer.getCurrentAcceleration(onSuccessAccel, onErrorAccel);
-}
+function onSuccess(heading) {
+    $('#rotation').html('Heading: ' + heading.magneticHeading);
+};
 
-function onSuccessAccel(acceleration){
-    console.log('Acceleration X: ' + acceleration.x + '\n' + 'Acceleration Y: ' + acceleration.y + '\n' + 'Acceleration Z: ' + acceleration.z + '\n' + 'Timestamp: ' +a cceleration.timestamp + '\n');
-}
+function onError(compassError) {
+    $('#rotation').html('Compass error: ' + compassError.code);
+};
 
-function onErrorAccel(){
-    $('#accel').html('ERROR');
-}
 
-function getRot() {
-   $('#rotation').html(navigator.compass);
-   console.log(navigator.compass);
-}
