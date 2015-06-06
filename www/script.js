@@ -26,7 +26,7 @@ function onSuccessAccel(acceleration) {
     var yAccel = Math.round(acceleration.y);
     var zAccel = Math.round(acceleration.z);
 
-    var totalAccel = Math.pow(Math.pow(Math.abs(xAccel), 3) + Math.pow(Math.abs(yAccel), 3) + Math.pow(Math.abs(zAccel), 3), 1 / 3);
+    var totalAccel = Math.round(Math.pow(Math.pow(Math.abs(xAccel), 3) + Math.pow(Math.abs(yAccel), 3) + Math.pow(Math.abs(zAccel), 3), 1 / 3));
     if(totalAccel> maxAccel){
         maxAccel = totalAccel;
     }
