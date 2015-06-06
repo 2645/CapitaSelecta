@@ -16,19 +16,10 @@ var options = {
 };
 
 function onDeviceReady() {
-    navigator.compass.watchHeading(onSuccessRot, onErrorRot, options);
     navigator.accelerometer.watchAcceleration(onSuccessAccel, onErrorAccel, options);
 
 
 }
-
-function onSuccessRot(heading) {
-    $('#rotation').html('Heading: ' + Math.round(heading.magneticHeading / 3.6));
-};
-
-function onErrorRot(compassError) {
-    $('#rotation').html('Compass error: ' + compassError.code);
-};
 
 function onSuccessAccel(acceleration) {
     var xAccel = Math.round(acceleration.x);
