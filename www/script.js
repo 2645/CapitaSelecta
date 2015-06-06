@@ -9,6 +9,10 @@ document.addEventListener("deviceready", onDeviceReady, false);
 // Cordova is ready to be used!
 //
 
+
+$(document).ready(function(){
+    $('body').html('this works tho');
+})
 var options = {
     frequency: 500
 }; 
