@@ -8,14 +8,25 @@
     <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="phonegap.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <div id="accel"></div>
-
-    <div>
-        <p>your current record of cellphone acceleration is : </p><br><span id="record"></span>
-        <p>tip: to improve this value throw your phone around!</p>
+    <div class="wrapper">
+        <h1>Throw that phone</h1>
+        <div>
+            <p>Je stats in de 3 richtingen:</p>
+            <div id="accel"></div>
+        </div>
+        <div>
+            <p>Je huidige record is: </p>
+            <br><span id="record"></span>
+            <p class="small">Tip: wil je makkelijk een hoge score? Gooi je GSM wat in het rond!!</p>
+            <p class="extraSmall">Jan De Smet is niet verantwoordelijk voor eventuele schade aan de GSM</p>
+        </div>
+        
+        <div class="descr"><p>App gemaakt door Jan De Smet
+            <br> Hierbij is gebruik gemaakt van de phonegap plugin : org.apache.cordova.device-motion</p></div>
     </div>
 
 </body>

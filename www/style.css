@@ -1,0 +1,32 @@
+html, body{
+    width:100%;
+    background-color: rgb(3,42,74);
+    color:white;
+    font-family: arial;
+    font-size: 2em;
+}
+
+h1{
+    text-align: center;
+}
+
+.wrapper{
+    width:80%;
+    margin: auto;
+}
+
+.descr {
+    font-size: 0.5em;
+}
+
+#accel{
+    text-align: left;
+}
+
+.small{
+    font-size: 0.4em;
+}
+
+.extraSmall{
+    font-size: 0.2em;
+}

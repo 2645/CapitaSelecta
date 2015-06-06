@@ -17,9 +17,8 @@ var options = {
 
 function onDeviceReady() {
     navigator.accelerometer.watchAcceleration(onSuccessAccel, onErrorAccel, options);
-
-
 }
+
 
 function onSuccessAccel(acceleration) {
     var xAccel = Math.round(acceleration.x);
