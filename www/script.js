@@ -23,7 +23,7 @@ function getAccel() {
 }
 
 function onSuccessAccel(acceleration){
-    $('#accel').html('Acceleration X: ' + acceleration.x + '\n' + 'Acceleration Y: ' + acceleration.y + '\n' + 'Acceleration Z: ' + acceleration.z + '\n' + 'Timestamp: ' +a cceleration.timestamp + '\n');
+    console.log('Acceleration X: ' + acceleration.x + '\n' + 'Acceleration Y: ' + acceleration.y + '\n' + 'Acceleration Z: ' + acceleration.z + '\n' + 'Timestamp: ' +a cceleration.timestamp + '\n');
 }
 
 function onErrorAccel(){
@@ -31,5 +31,6 @@ function onErrorAccel(){
 }
 
 function getRot() {
-
+   $('#rotation').html(navigator.compass);
+   console.log(navigator.compass);
 }
