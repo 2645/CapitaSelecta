@@ -16,15 +16,11 @@ var options = {
 };
 
 function onDeviceReady() {
-    $('body').html('FUCK THIS');
-    $(document).ready(function () {
-        console.log(device);
-        console.log(window.device);
-        console.log(window.plugins);
-        $('body').append('WE READY');
+    
+    $('body').append('<div>WE READY</div>');
 
-        navigator.compass.watchHeading(onSuccess, onError, options);
-    })
+    navigator.compass.watchHeading(onSuccess, onError, options);
+
 
 
 }
