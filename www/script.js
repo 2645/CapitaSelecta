@@ -10,20 +10,21 @@ document.addEventListener("deviceready", onDeviceReady, false);
 //
 
 
-$(document).ready(function(){
-    $('body').html('this works tho');
-})
+
 var options = {
     frequency: 500
-}; 
+};
 
 function onDeviceReady() {
-    console.log(device);
-    console.log(window.device);
-    console.log(window.plugins);
-    $('body').append('WE READY');
-    
-    navigator.compass.watchHeading(onSuccess, onError, options);
+    $(document).ready(function () {
+        console.log(device);
+        console.log(window.device);
+        console.log(window.plugins);
+        $('body').append('WE READY');
+
+        navigator.compass.watchHeading(onSuccess, onError, options);
+    })
+
 
 }
 
@@ -34,5 +35,3 @@ function onSuccess(heading) {
 function onError(compassError) {
     $('#rotation').html('Compass error: ' + compassError.code);
 };
-
-
