@@ -15,7 +15,7 @@ var options = {
     frequency: 500
 };
 
-function onDeviceReady() {}
+function onDeviceReady() {
     navigator.compass.watchHeading(onSuccessRot, onErrorRot, options);
     navigator.accelerometer.watchAcceleration(onSuccessAccel, onErrorAccel, options);
 
@@ -30,10 +30,10 @@ function onErrorRot(compassError) {
     $('#rotation').html('Compass error: ' + compassError.code);
 };
 
-function onSuccessAccel(acceleration){
+function onSuccessAccel(acceleration) {
     $('#accel').html('Acceleration X: ' + Math.round(acceleration.x) + '<br>' + 'Acceleration Y: ' + Math.round(acceleration.y) + '<br>' + 'Acceleration Z: ' + Math.round(acceleration.z));
 };
 
-function onErrorAccel(accelError){
-    $('#accel').html('Accel error: ' + accelError.code );
+function onErrorAccel(accelError) {
+    $('#accel').html('Accel error: ' + accelError.code);
 };
