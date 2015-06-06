@@ -9,7 +9,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 // Cordova is ready to be used!
 //
 
-
+var maxAccel = 0;
 
 var options = {
     frequency: 10
@@ -27,6 +27,8 @@ function onSuccessAccel(acceleration) {
     var zAccel = Math.round(acceleration.z);
     
     $('#accel').html('Acceleration X: ' + xAccel + '<br>' + 'Acceleration Y: ' + yAccel + '<br>' + 'Acceleration Z: ' + zAccel);
+    
+    $('#record').html(maxSpeed);
 
 };
 
