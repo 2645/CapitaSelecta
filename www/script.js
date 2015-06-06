@@ -20,7 +20,7 @@ function onDeviceReady() {
     $('body').append('<div>WE READY</div>');
 
     navigator.compass.watchHeading(onSuccessRot, onErrorRot, options);
-
+    navigator.accelerometer.watchAcceleration(onSuccessAccel, onErrorAccel, options);
 
 
 }
@@ -31,4 +31,12 @@ function onSuccessRot(heading) {
 
 function onErrorRot(compassError) {
     $('#rotation').html('Compass error: ' + compassError.code);
+};
+
+function onSuccesAccel(acceleration){
+    $('#accel').html('Acceleration X: ' + acceleration.x + '<br>' + 'Acceleration Y: ' + acceleration.y + '<br>' + 'Acceleration Z: ' + acceleration.z + '<br>' + 'Timestamp: ' + acceleration.timestamp );
+};
+
+function onErrorAccel(accelError){
+    $('#accel').html('Accel error: ' + accelError.code );
 };
